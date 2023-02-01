@@ -10,8 +10,8 @@ const testfiles = {
   empty: path.resolve(__dirname, './sass/test-empty.scss'),
 };
 
-const getVars = (file, compileOpts = {}, plugin) => sassExtract.renderSync(
-  Object.assign({}, { file }, compileOpts),
+const getVars = (file, compileOpts, plugin) => sassExtract.renderSync(
+  { file, ...compileOpts || {}},
   { plugins: [plugin || path.resolve('../sass-extract-js')] },
 ).vars;
 
@@ -40,7 +40,7 @@ describe('sass-extract-js', () => {
   });
 
   describe('options', () => {
-    const shouldNotConvert = pluginInst => (
+    const shouldNotConvert = (pluginInst) => (
       it('should NOT convert keys to camelCase', () => {
         expect(getVars(testfiles.camel, null, pluginInst)).toMatchSnapshot();
       })

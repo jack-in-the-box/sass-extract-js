@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sass-extract-js options plugin instance with options should NOT convert keys to camelCase 1`] = `
-Object {
+{
   "MY-VAR": "500px",
   "My-Cool_var": "400px",
   "my-var": "200px",
@@ -10,7 +10,7 @@ Object {
   "my_other_vAr": "300px",
   "my_var": "200px",
   "my_var_2": "600px",
-  "value-Map": Object {
+  "value-Map": {
     "my-var5": "900px",
     "my__var--6": "1000px",
     "my_var4": "800px",
@@ -19,7 +19,7 @@ Object {
 `;
 
 exports[`sass-extract-js options plugin instance without options should NOT convert keys to camelCase 1`] = `
-Object {
+{
   "MY-VAR": "500px",
   "My-Cool_var": "400px",
   "my-var": "200px",
@@ -28,7 +28,7 @@ Object {
   "my_other_vAr": "300px",
   "my_var": "200px",
   "my_var_2": "600px",
-  "value-Map": Object {
+  "value-Map": {
     "my-var5": "900px",
     "my__var--6": "1000px",
     "my_var4": "800px",
@@ -37,7 +37,7 @@ Object {
 `;
 
 exports[`sass-extract-js options plugin name should NOT convert keys to camelCase 1`] = `
-Object {
+{
   "MY-VAR": "500px",
   "My-Cool_var": "400px",
   "my-var": "200px",
@@ -46,7 +46,7 @@ Object {
   "my_other_vAr": "300px",
   "my_var": "200px",
   "my_var_2": "600px",
-  "value-Map": Object {
+  "value-Map": {
     "my-var5": "900px",
     "my__var--6": "1000px",
     "my_var4": "800px",
@@ -55,7 +55,7 @@ Object {
 `;
 
 exports[`sass-extract-js should convert basic SASS vars 1`] = `
-Object {
+{
   "boolean": true,
   "builtinFunc": "rgb(255, 51, 51)",
   "calculated": 200,
@@ -77,7 +77,7 @@ Object {
   "rgbaColor": "rgba(255, 255, 255, 0.5)",
   "stringList": "'Helvetica', 'Arial', sans-serif",
   "unquotedString": "string",
-  "valueMap": Object {
+  "valueMap": {
     "keyOne": "2em",
     "keyThree": false,
     "keyTwo": "key",
@@ -86,13 +86,13 @@ Object {
 `;
 
 exports[`sass-extract-js should convert keys to camelCase 1`] = `
-Object {
+{
   "myCoolVar": "400px",
   "myOtherVAr": "300px",
   "myVar": "500px",
   "myVar2": "600px",
   "myVar3": "700px",
-  "valueMap": Object {
+  "valueMap": {
     "myVar4": "800px",
     "myVar5": "900px",
     "myVar6": "1000px",
@@ -100,17 +100,17 @@ Object {
 }
 `;
 
-exports[`sass-extract-js should handle file with no variables 1`] = `Object {}`;
+exports[`sass-extract-js should handle file with no variables 1`] = `{}`;
 
 exports[`sass-extract-js should handle imports 1`] = `
-Object {
+{
   "importedVar": true,
   "myVar": "100px",
 }
 `;
 
 exports[`sass-extract-js should pass sass options through 1`] = `
-Object {
+{
   "myVar": "100px",
   "nestedVar": false,
 }
